@@ -18,12 +18,12 @@ export default function Chat() {
       <MultiChatSocket {...chatProps} />
       <MultiChatWindow
         {...chatProps}
-        style={{ height: "100vh", width: "100vw" }}
+        style={{ height: "100vh" }}
         renderChatHeader={(chat) => <Header chat={chat} />}
-        renderMessage={(props) => {
+        renderMessageForm={(props) => {
           return (
             <StandardMessageForm props={props} activeChat={chatProps.chat} />
-          )
+          );
         }}
       />
     </div>
